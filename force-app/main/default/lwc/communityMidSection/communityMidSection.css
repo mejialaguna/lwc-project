@@ -1,0 +1,8 @@
+.communityMidSection {
+  width: 1280px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  gap: 148px;
+  justify-self: center;
+}

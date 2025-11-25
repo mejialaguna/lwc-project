@@ -1,0 +1,33 @@
+<template>
+  <div class="detailsWrapper">
+    <ul>
+      <template for:each={tabs} for:item="tab" for:index="idx">
+        <li
+          role="presentation"
+          key={tab.title}
+          class={tab.cssClass}
+          data-tab={tab.title}
+          onclick={handleClick}
+        >
+          {tab.title}
+          <img src={svgArrow} />
+        </li>
+      </template>
+      <c-spacer
+      border="1px solid var(--color-Neutral-black)"
+      width="191px"
+      ></c-spacer>
+    </ul>
+    <div class="contact">
+      <span>question?</span>
+      <div>
+        <span> 💬 Click the chat icon to the bottom left of the page. </span>
+        <span> 📞 Call 215-854-4171 </span>
+        <span>
+          📧 Email &nbsp;
+          <span class="serviceEmail"> customerservice@inquirer.com </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</template>

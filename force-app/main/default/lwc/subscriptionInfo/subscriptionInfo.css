@@ -1,0 +1,11 @@
+.subscriptionInfo {
+  height: 840px;
+}
+
+.subscriptionInfo img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 296px;
+  height: 367px;
+}

@@ -1,0 +1,72 @@
+.detailsWrapper {
+  color: var(--neutral-text-color);
+  width: 277px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.detailsWrapper ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.details {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.active {
+  color: var(--color-primary-blue);
+}
+
+.details img {
+  display: none;
+}
+
+.details:nth-last-child(-n + 4) img {
+  display: inline;
+  aspect-ratio: 1;
+  width: 16px;
+  height: 16px;
+  margin-left: 3px;
+  margin-top: -10px;
+}
+
+.contact {
+  padding-top: var(--spacing-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.contact > span {
+  text-transform: capitalize;
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--spacing-lg);
+}
+
+.contact > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: var(--font-size-sm);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--spacing-md);
+}
+
+.serviceEmail {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}

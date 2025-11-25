@@ -1,0 +1,13 @@
+<template>
+  <div class="subscriptionInfo">
+    <template if:true={currentTabComponent}>
+      <div class="tab-content">
+        <h2>{currentTabComponent.title}</h2>
+      </div>
+    </template>
+    <img 
+      src={imageUrl}
+      alt="Man working or studying at computer"
+    />
+  </div>
+</template>

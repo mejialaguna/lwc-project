@@ -1,0 +1,36 @@
+.modalContentWrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--base-white);
+  padding: var(--spacing-md) 20px;
+  width: 333px;
+  align-self: center;
+  text-align: center;
+  gap: var(--spacing-lg);
+}
+
+.header h2 {
+  color: var(--color-Neutral-blac);
+  font-weight: 700;
+  font-size: var(--font-size-md);
+  line-height: var(--spacing-sm);
+}
+
+.content p {
+  line-height: var(--spacing-sm);
+  color: var(--neutral-text-color);
+}
+
+.buttonWrapper button {
+  padding: var(--spacing-xs) var(--spacing-md);
+  gap: var(--spacing-xs);
+  background-color: var(--color-primary-blue);
+  color: var(--base-white);
+  font-size: var(--font-size-sm);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--spacing-sm);
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}

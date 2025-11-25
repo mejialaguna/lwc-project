@@ -1,0 +1,12 @@
+<template>
+  <div class="communityMidSection">
+    <c-subscription-details
+      active-tab={activeTab}
+      ontabchange={handleTabChange}
+    ></c-subscription-details>
+    <c-subscription-info active-tab={activeTab}></c-subscription-info>
+  </div>
+  <template if:true={shouldModalOpen}>
+    <c-modal-component should-modal-open={shouldModalOpen} onhandlemodal={handleModal}></c-modal-component>
+  </template>
+</template>

@@ -1,0 +1,50 @@
+.communityHeaderWrapper {
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  justify-self: center;
+  margin-bottom: 20px;
+}
+
+.communityHeaderWrapper:first-child {
+  text-align: center;
+}
+
+.buttonWrapper {
+  display: flex;
+  align-self: flex-end;
+  gap: 15px;
+}
+
+
+.buttonWrapper > button {
+  display: flex;
+  height: 32px;
+  padding: 0 var(--spacing-sm);
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background-color: var(--base-donate-yellow);
+  color: var(--color-Neutral-black);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--spacing-sm);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonWrapper > div {
+  width: 3px;
+  height: 32px;
+  background-color: var(--color-Neutral-black);
+}
+
+.buttonWrapper > svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
