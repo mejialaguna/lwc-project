@@ -1,7 +1,12 @@
 import { LightningElement, api } from "lwc";
 
-export default class C2pModalComponent extends LightningElement {
-  @api shouldModalOpen;
+export default class ModalContentComponent extends LightningElement {
+  @api shouldModalOpen = false;
+  @api shouldShowCloseBtn = false;
+  @api header = "";
+  @api description = "";
+  @api confirmationBtn = "";
+  @api navigationBtn = "";
 
   handleModal() {
     // Dispatch event to parent

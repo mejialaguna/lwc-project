@@ -8,15 +8,7 @@
     aria-describedby="modal-content-id-1"
   >
     <div class="slds-modal__container">
-      <div class="modalContentWrapper">
-        <slot name="cancel"></slot>
-        <div class="modalHeaderWrapper">
-          <slot name="header"></slot>
-          <slot name="description"></slot>
-        </div>
-        <slot name="confirmation"></slot>
-        <slot name="navigation"></slot>
-      </div>
+      <slot name="modalContent"></slot>
     </div>
   </section>
   <div class="slds-backdrop slds-backdrop_open"></div>

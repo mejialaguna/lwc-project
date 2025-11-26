@@ -7,42 +7,18 @@
     <c-subscription-info active-tab={activeTab}></c-subscription-info>
   </div>
   <template if:true={shouldModalOpen}>
-    <c-modal-component
-      should-modal-open={shouldModalOpen}
-      onhandlemodal={handleModal}
-    >
-      <button class="modalCancelButton" slot="cancel">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-        >
-          <path
-            d="M12 10.4618L20.4618 2L22 3.53822L13.5382 12L22 20.4618L20.4618 22L12 13.5382L3.53822 22L2 20.4618L10.4618 12L2 3.53822L3.53822 2L12 10.4618Z"
-            fill="black"
-          />
-        </svg>
-      </button>
-      <h2 class="modalTitle" slot="header">
-        You are about to sign up for automatic payments
-      </h2>
-      <p class="modalDescription" slot="description">
-        You will be charged $15.95 every 4 weeks until you cancel. To change or
+    <c-modal-component should-modal-open={shouldModalOpen}>
+      <c-modal-content-component
+        slot="modalContent"
+        should-modal-open={shouldModalOpen}
+        should-show-close-btn="true"
+        header="You are about to sign up for automatic payments"
+        description="You will be charged $15.95 every 4 weeks until you cancel. To change or
         cancel your subscription, contact Customer Service at 1-800-222-2765 or
-        manage your account at inquirer.com/account.
-      </p>
-      <button
-        slot="confirmation"
-        class="modalConfirmationButton"
-        onclick={handleModal}
-      >
-        Return to My Subscription
-      </button>
-      <!-- <button slot="navigation" class="modalNavigationButton" onclick={handleModal}>
-        cancel hold
-      </button> -->
+        manage your account at inquirer.com/account."
+        confirmation-btn="Return to My Subscription"
+        onhandlemodal={handleModal}
+      ></c-modal-content-component>
     </c-modal-component>
   </template>
 </template>

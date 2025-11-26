@@ -1,4 +1,17 @@
-.modalContentWrapper .modalCancelButton {
+.modalContentWrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--base-white);
+  padding: var(--spacing-lg) 28px;
+  width: 510px;
+  align-self: center;
+  text-align: center;
+  gap: var(--spacing-xlg);
+  position: relative;
+  align-items: center;
+}
+
+.modalCancelButton {
   width: 24px;
   height: 24px;
   color: var(--color-Neutral-black);
@@ -9,7 +22,18 @@
   border: none;
 }
 
-.modalContentWrapper .modalTitle {
+.modalHeaderWrapper {
+  padding: var(--spacing-sm) 0;
+  display: flex;
+  max-height: 230px;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+.modalHeader {
   color: var(--color-Neutral-black);
   text-align: center;
   font-size: var(--font-size-xl);
@@ -18,7 +42,7 @@
   font-weight: 600;
 }
 
-.modalContentWrapper .modalDescription {
+.modalDescription {
   color: var(--color-Neutral-black);
   text-align: center;
   font-style: normal;
@@ -27,7 +51,7 @@
   line-height: var(--spacing-lg);
 }
 
-.modalContentWrapper .modalConfirmationButton {
+.modalConfirmationButton {
   display: flex;
   width: 334px;
   height: 56px;
@@ -47,7 +71,7 @@
   align-items: center;
 }
 
-.modalContentWrapper .modalNavigationButton {
+.modalNavigationButton {
   display: flex;
   width: 334px;
   height: 56px;

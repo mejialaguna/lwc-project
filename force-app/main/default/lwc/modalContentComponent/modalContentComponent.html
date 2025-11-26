@@ -1,0 +1,38 @@
+<template>
+  <div class="modalContentWrapper">
+    <template if:true={shouldShowCloseBtn}>
+      <button class="modalCancelButton" onclick={handleModal}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M12 10.4618L20.4618 2L22 3.53822L13.5382 12L22 20.4618L20.4618 22L12 13.5382L3.53822 22L2 20.4618L10.4618 12L2 3.53822L3.53822 2L12 10.4618Z"
+            fill="black"
+          />
+        </svg>
+      </button>
+    </template>
+    <div class="modalHeaderWrapper">
+      <template if:true={header}>
+        <h2 class="modalHeader">{header}</h2>
+      </template>
+      <template if:true={description}>
+        <p class="modalDescription">{description}</p>
+      </template>
+    </div>
+    <template if:true={confirmationBtn}>
+      <button class="modalConfirmationButton" onclick={handleModal}>
+        {confirmationBtn}
+      </button>
+    </template>
+    <template if:true={navigationBtn}>
+      <button class="modalNavigationButton" onclick={handleModal}>
+        {navigationBtn}
+      </button>
+    </template>
+  </div>
+</template>
