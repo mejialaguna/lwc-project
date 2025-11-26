@@ -9,22 +9,13 @@
   >
     <div class="slds-modal__container">
       <div class="modalContentWrapper">
-        <header class="header">
-          <h2 id="modal-heading-01" class="">
-            Payment details updated!
-          </h2>
-        </header>
-        <div
-          class="content"
-          id="modal-content-id-1"
-        >
-          <p>Your payment information has been successfully updated and is now on file.</p>
+        <slot name="cancel"></slot>
+        <div class="modalHeaderWrapper">
+          <slot name="header"></slot>
+          <slot name="description"></slot>
         </div>
-        <footer class="buttonWrapper">
-          <button class="" onclick={handleModal}>
-            Return to My Subscription
-          </button>
-        </footer>
+        <slot name="confirmation"></slot>
+        <slot name="navigation"></slot>
       </div>
     </div>
   </section>

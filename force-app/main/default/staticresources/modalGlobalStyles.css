@@ -1,0 +1,68 @@
+.modalContentWrapper .modalCancelButton {
+  width: 24px;
+  height: 24px;
+  color: var(--color-Neutral-black);
+  position: absolute;
+  right: 13px;
+  top: 8px;
+  background: none;
+  border: none;
+}
+
+.modalContentWrapper .modalTitle {
+  color: var(--color-Neutral-black);
+  text-align: center;
+  font-size: var(--font-size-xl);
+  line-height: var(--spacing-lg);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.modalContentWrapper .modalDescription {
+  color: var(--color-Neutral-black);
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: var(--spacing-lg);
+}
+
+.modalContentWrapper .modalConfirmationButton {
+  display: flex;
+  width: 334px;
+  height: 56px;
+  padding: 0 var(--spacing-xlg);
+  gap: var(--spacing-xxs);
+  flex-shrink: 0;
+  background-color: var(--color-primary-blue);
+  color: var(--base-white);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--spacing-md);
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContentWrapper .modalNavigationButton {
+  display: flex;
+  width: 334px;
+  height: 56px;
+  padding: 0 var(--spacing-xlg);
+  gap: var(--spacing-xxs);
+  flex-shrink: 0;
+  background-color: var(--color-primary-blue);
+  color: var(--base-white);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--spacing-md);
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+}
