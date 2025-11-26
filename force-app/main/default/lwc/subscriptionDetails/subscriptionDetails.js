@@ -1,8 +1,22 @@
-import { LightningElement, api } from "lwc";
+import { LightningElement, api, wire } from "lwc";
 import linkArrow from "@salesforce/resourceUrl/linkArrow";
-import { COMMUNITY_TABS } from 'c/constants';
+import { MessageContext } from "lightning/messageService";
+import ModalLms from "c/lmsUtils";
+import { COMMUNITY_TABS } from "c/constants";
 
 export default class subscriptionDetails extends LightningElement {
+  /**
+   * @wire(MessageContext) decorator relationship:
+   * - @wire(MessageContext) is a decorator that reactively injects the Salesforce message context
+   * - messageContext is the property that stores the injected value
+   * - They work together: @wire FEEDS the value INTO messageContext
+   * - messageContext is REQUIRED for LMS operations - it must be passed to subscribe/publish functions
+   * - Without @wire injecting MessageContext, the messageContext property would be undefined
+   * - This context is what identifies the component's domain for LMS communication
+   */
+  @wire(MessageContext)
+  messageContext;
+
   @api activeTab;
   svgArrow = linkArrow;
 
@@ -22,5 +36,7 @@ export default class subscriptionDetails extends LightningElement {
       detail: { tabName }
     });
     this.dispatchEvent(newActiveTabEvent);
+
+    ModalLms.publishModalMessage(this.messageContext, true);
   }
 }

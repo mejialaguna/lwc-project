@@ -1,6 +1,6 @@
-import { LightningElement, api } from 'lwc';
-import subscriptionImage from '@salesforce/resourceUrl/communitySubscriptionImage';
-import { COMMUNITY_TABS } from 'c/constants';
+import { LightningElement, api } from "lwc";
+import subscriptionImage from "@salesforce/resourceUrl/communitySubscriptionImage";
+import { COMMUNITY_TABS } from "c/constants";
 
 export default class subscriptionInfo extends LightningElement {
   @api activeTab;
@@ -8,7 +8,11 @@ export default class subscriptionInfo extends LightningElement {
 
   // Getters for conditional rendering
   get currentTabComponent() {
-    const currentTab = COMMUNITY_TABS.find((tab) => tab.title.toLowerCase() === this.activeTab.toLowerCase());
+    if (!this.activeTab) return null;
+
+    const currentTab = COMMUNITY_TABS.find(
+      (tab) => tab.title.toLowerCase() === this.activeTab.toLowerCase()
+    );
     return currentTab || null;
   }
 }

@@ -6,19 +6,16 @@
     ></c-subscription-details>
     <c-subscription-info active-tab={activeTab}></c-subscription-info>
   </div>
-  <template if:true={shouldModalOpen}>
-    <c-modal-component should-modal-open={shouldModalOpen}>
-      <c-modal-content-component
-        slot="modalContent"
-        should-modal-open={shouldModalOpen}
-        should-show-close-btn="true"
-        header="You are about to sign up for automatic payments"
-        description="You will be charged $15.95 every 4 weeks until you cancel. To change or
+
+  <c-modal-component>
+    <c-modal-content-component
+      slot="modalContent"
+      should-show-close-btn="true"
+      header="You are about to sign up for automatic payments"
+      description="You will be charged $15.95 every 4 weeks until you cancel. To change or
         cancel your subscription, contact Customer Service at 1-800-222-2765 or
         manage your account at inquirer.com/account."
-        confirmation-btn="Return to My Subscription"
-        onhandlemodal={handleModal}
-      ></c-modal-content-component>
-    </c-modal-component>
-  </template>
+      confirmation-btn="Return to My Subscription"
+    ></c-modal-content-component>
+  </c-modal-component>
 </template>

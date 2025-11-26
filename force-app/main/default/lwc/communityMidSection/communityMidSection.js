@@ -1,12 +1,9 @@
-import { LightningElement } from 'lwc';
+import { LightningElement } from "lwc";
 
 export default class CommunityMidSection extends LightningElement {
-  activeTab = 'My Subscription';
-  shouldModalOpen = true;
+  activeTab = "My Subscription";
+
   handleTabChange(event) {
     this.activeTab = event.detail.tabName;
-  }
-  handleModal(event){
-    this.shouldModalOpen = event.detail.shouldOpen;
   }
 }

@@ -1,15 +1,17 @@
 <template>
-  <section
-    role="dialog"
-    tabindex="-1"
-    class="slds-modal slds-fade-in-open"
-    aria-labelledby="modal-heading-01"
-    aria-modal="true"
-    aria-describedby="modal-content-id-1"
-  >
-    <div class="slds-modal__container">
-      <slot name="modalContent"></slot>
-    </div>
-  </section>
-  <div class="slds-backdrop slds-backdrop_open"></div>
+  <template if:true={shouldModalOpen}>
+    <section
+      role="dialog"
+      tabindex="-1"
+      class="slds-modal slds-fade-in-open"
+      aria-labelledby="modal-heading-01"
+      aria-modal="true"
+      aria-describedby="modal-content-id-1"
+    >
+      <div class="slds-modal__container">
+        <slot name="modalContent"></slot>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </template>
 </template>
