@@ -4,7 +4,7 @@
   background-color: var(--base-white);
   padding: var(--spacing-lg) 28px;
   width: 510px;
-  align-self: center;
+  justify-self: center;
   text-align: center;
   gap: var(--spacing-xlg);
   position: relative;

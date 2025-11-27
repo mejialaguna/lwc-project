@@ -1,10 +1,14 @@
 <template>
   <div class="communityMidSection">
     <c-subscription-details
+      community-tabs={communityTabs}
       active-tab={activeTab}
       ontabchange={handleTabChange}
     ></c-subscription-details>
-    <c-subscription-info active-tab={activeTab}></c-subscription-info>
+    <c-subscription-info
+      active-tab={activeTab}
+      community-tabs={communityTabs}
+    ></c-subscription-info>
   </div>
 
   <c-modal-component>

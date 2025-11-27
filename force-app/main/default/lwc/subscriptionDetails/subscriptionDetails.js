@@ -2,7 +2,6 @@ import { LightningElement, api, wire } from "lwc";
 import linkArrow from "@salesforce/resourceUrl/linkArrow";
 import { MessageContext } from "lightning/messageService";
 import ModalLms from "c/lmsUtils";
-import { COMMUNITY_TABS } from "c/constants";
 
 export default class subscriptionDetails extends LightningElement {
   /**
@@ -18,14 +17,17 @@ export default class subscriptionDetails extends LightningElement {
   messageContext;
 
   @api activeTab;
+  @api communityTabs;
   svgArrow = linkArrow;
 
   // Computed getter that adds the class to each tab
   get tabs() {
-    return COMMUNITY_TABS.map((tab) => ({
+    const currentTab = Object.values(this.communityTabs || {}).map((tab) => ({
       ...tab,
       cssClass: `details ${tab.title === this.activeTab ? "active" : ""}`
     }));
+
+    return currentTab;
   }
 
   handleClick(event) {

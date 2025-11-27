@@ -4,6 +4,7 @@
   flex-direction: column;
   gap: var(--spacing-sm);
   justify-self: center;
+  margin-top: 24px;
   margin-bottom: 20px;
 }
 
@@ -16,7 +17,6 @@
   align-self: flex-end;
   gap: 15px;
 }
-
 
 .buttonWrapper > button {
   display: flex;

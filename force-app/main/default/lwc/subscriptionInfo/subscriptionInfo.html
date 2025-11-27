@@ -3,11 +3,15 @@
     <template if:true={currentTabComponent}>
       <div class="tab-content">
         <h2>{currentTabComponent.title}</h2>
+        <!-- Dynamic component rendering -->
+        <template if:false={hasValidComponent}>
+          <lwc:component lwc:is={currentTabComponent.component}></lwc:component>
+        </template>
+        <template if:true={hasValidComponent}>
+          <p>Component not available</p>
+        </template>
       </div>
     </template>
-    <img 
-      src={imageUrl}
-      alt="Man working or studying at computer"
-    />
+    <img src={imageUrl} alt="Man working or studying at computer" />
   </div>
 </template>
