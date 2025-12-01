@@ -1,17 +1,19 @@
 import { LightningElement, api } from "lwc";
 
 export default class Spacer extends LightningElement {
-  sectionDevider = false;
-  @api border = "1px solid var(--color-neutral-black)";
-  @api width = "100%";
-  @api margin = "0";
+  @api customStyles = {};
+
+  renderedCallback() {
+    const element = this.template.querySelector(".spacer");
+
+    if (element) {
+      element.style.cssText = this.computedStyle;
+    }
+  }
 
   get computedStyle() {
-    return `
-      border-bottom: ${this.border};
-      width: ${this.width};
-      margin: ${this.margin};
-      align-self: normal;
-    `;
+    return Object.entries(this.customStyles)
+      .map(([key, value]) => `${key}: ${value}`)
+      .join(" ");
   }
 }

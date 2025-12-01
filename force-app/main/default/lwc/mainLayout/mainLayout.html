@@ -1,14 +1,11 @@
 <template>
   <div class="wrapper">
     <c-community-header></c-community-header>
-    <c-spacer
-      border="1px solid var(--light-charcoal-gray)"
-      margin="0 0 var(--spacing-xlg) 0"
-    ></c-spacer>
+    <c-spacer custom-styles={spacerCustomStyles}></c-spacer>
 
     <slot name="children"></slot>
 
-    <c-spacer border="1px solid var(--light-charcoal-gray)"></c-spacer>
+    <c-spacer custom-styles={spacerCommonCustomStyles}></c-spacer>
     <c-community-bottom-menu></c-community-bottom-menu>
     <c-community-footer></c-community-footer>
   </div>

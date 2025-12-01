@@ -19,6 +19,10 @@ export default class subscriptionDetails extends LightningElement {
   @api activeTab;
   @api communityTabs;
   svgArrow = linkArrow;
+  spacerCustomStyles = {
+    "border-bottom": "1px solid var(--color-Neutral-black);",
+    width: "191px;"
+  };
 
   // Computed getter that adds the class to each tab
   get tabs() {

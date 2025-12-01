@@ -18,6 +18,12 @@
   font-weight: 700;
   line-height: 24px;
   cursor: pointer;
+  text-decoration: none;
+  color: var(--neutral-text-color);
+}
+
+.detailsWrapper ul a:hover {
+  color: var(--neutral-text-color);
 }
 
 .active {
