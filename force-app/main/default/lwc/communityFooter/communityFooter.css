@@ -3,8 +3,9 @@
 ================================== */
 .footer-container {
   padding-top: 24px;
-  margin-top: 24px;
   padding-bottom: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
   max-width: 1280px;
   border-top: 1px solid var(--color-Neutral-charcoal-gray);
   display: flex;
@@ -12,19 +13,16 @@
   gap: 40px;
 }
 
-@media (min-width: 640px) {
-  .footer-container {
-    gap: 0;
-  }
-}
-
 @media (min-width: 1024px) {
   .footer-container {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     column-gap: 24px;
-    width: 100%;
-    justify-self: center;
+  }
+}
+@media (min-width: 1280px) {
+  .footer-container {
+    margin: 0 auto;
   }
 }
 
@@ -39,12 +37,6 @@
 @media (min-width: 640px) {
   .footer-section-sm-hide {
     display: none;
-  }
-}
-
-@media (min-width: 1024px) {
-  .footer-section-lg-show {
-    display: block;
   }
 }
 
@@ -165,20 +157,8 @@
 
 .footer-copyright-content {
   padding: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
   display: flex;
   flex-direction: column;
-}
-
-@media (min-width: 1024px) {
-  .footer-copyright-content {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
 
 .footer-legal {
@@ -186,12 +166,6 @@
   flex-direction: column;
   gap: 4px;
   align-items: center;
-}
-
-@media (min-width: 1024px) {
-  .footer-legal {
-    align-items: flex-start;
-  }
 }
 
 .footer-legal-link {
@@ -205,14 +179,7 @@
 }
 
 .footer-legal-row {
-  display: grid;
-  gap: 4px;
-}
-
-@media (min-width: 1024px) {
-  .footer-legal-row {
-    display: inline-block;
-  }
+  display: inline-block;
 }
 
 .footer-separator {
@@ -229,7 +196,24 @@
 }
 
 @media (min-width: 1024px) {
+  .footer-copyright-content {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-legal {
+    align-items: flex-start;
+  }
+
   .footer-separator-lg {
     display: inline;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer-legal-row:last-child {
+    display: flex;
+    justify-content: center;
   }
 }
