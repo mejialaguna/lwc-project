@@ -9,7 +9,7 @@
 }
 
 .communityHeaderWrapper:first-child {
-  text-align: center;
+  align-items: center;
 }
 
 .buttonWrapper {
