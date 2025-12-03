@@ -20,7 +20,7 @@
     column-gap: 24px;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1380px) {
   .footer-container {
     margin: 0 auto;
   }
@@ -29,21 +29,9 @@
 /* ===============================
    FOOTER COLUMNS
 ================================== */
-
-.footer-section {
-  display: block;
-}
-
-@media (min-width: 640px) {
-  .footer-section-sm-hide {
-    display: none;
-  }
-}
-
 .footer-col-wrapper {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
 .footer-title {
